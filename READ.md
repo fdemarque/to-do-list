@@ -47,6 +47,12 @@ npm install
 ng serve
 ```
 
+### Iniciando JSON Server
+
+```bash
+json-server db.json
+```
+
 Acesse a aplicação em [http://localhost:4200](http://localhost:4200).
 
 ## 📦 Build para Produção
