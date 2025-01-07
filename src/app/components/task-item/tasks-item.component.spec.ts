@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NgModule } from '@angular/core';
 import { TasksItemComponent } from './tasks-item.component';
+import { AppComponent } from '../../app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('TasksItemComponent', () => {
   let component: TasksItemComponent;
@@ -21,3 +24,11 @@ describe('TasksItemComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    FontAwesomeModule
+  ]
+})
+export class AppModule { }
