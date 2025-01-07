@@ -14,15 +14,18 @@ export class TasksComponent implements OnInit {
 
   @Input() tarefa: any;
   tarefas: Tarefa[] = [];
-  constructor(private taskService:TaskService) { }
+  constructor(private taskService: TaskService) { }
+  
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((dado) => {
       this.tarefas = dado;
       console.log(dado);
     });
   }
-  ngOnInut(): void {
 
+  deleteTask(tarefa: Tarefa) {
+    this.taskService.deleteTask(tarefa).subscribe(() =>
+      (this.tarefas = this.tarefas.filter((t) => t.id == tarefa.id)));
   }
 
 }

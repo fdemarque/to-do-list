@@ -2,4 +2,4 @@
     <li *ngFor="let tarefa of tarefas">{{ tarefa.tarefa }}</li>
 </ul> -->
 
-<app-tasks-item *ngFor="let tarefa of tarefas" [tarefa]="tarefa"></app-tasks-item>
+<app-tasks-item *ngFor="let tarefa of tarefas" [tarefa]="tarefa" (onDeleteTask)="deleteTask($event)"></app-tasks-item>

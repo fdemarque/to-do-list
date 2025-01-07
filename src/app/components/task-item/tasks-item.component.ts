@@ -17,7 +17,7 @@ export class TasksItemComponent {
   faTimes = faTimes
 
   onDelete(tarefa: Tarefa) {
-    this.onDeleteTask.emit()
+    this.onDeleteTask.emit(tarefa);
   }
 
 }
